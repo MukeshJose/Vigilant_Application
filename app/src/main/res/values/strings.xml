@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Vigilant Application</string>
+    <string name="login_title">Login</string>
+    <string name="phone_number">Enter Phone Number</string>
+    <string name="email_address">Enter Email Address  </string>
+    <string name="password">Enter Password </string>
+    <string name="forgot_password">Forgot Password? </string>
+    <string name="login_button">LOGIN </string>
+    <string name="new_user">New User </string>
+    <string name="register">Register </string>
+    <string name="official_account">Go to Officers login </string>
+    <string name="client_account">Go back to client Login</string>
+    <string name="more_information">For more information please contact:  </string>
+    <string name="login_trouble">Having trouble logging in ?</string>
+    <string name="admin_contact">Contact Admin</string>
+    <string name="registration">Registration </string>
+
+    <string name="user_name">Enter the Name </string>
+    <string name="ID_type">Select ID Type </string>
+    <string name="ID_number">Enter ID Number </string>
+    <string name="select_password">Select a Password </string>
+
+
+</resources>
