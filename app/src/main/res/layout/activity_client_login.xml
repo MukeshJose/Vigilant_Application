@@ -14,7 +14,7 @@
         android:layout_marginTop="150dp">
 
         <TextView
-            android:id="@+id/login_title"
+            android:id="@+id/tv_login_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -25,11 +25,11 @@
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/phone_number"
+            android:id="@+id/et_phone_number"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/login_title"
+            android:layout_below="@+id/tv_login_title"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
             app:endIconMode="clear_text"
@@ -45,11 +45,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password"
+            android:id="@+id/et_password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/phone_number"
+            android:layout_below="@+id/et_phone_number"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             app:endIconMode="password_toggle">
@@ -64,20 +64,20 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/forgot_password"
+            android:id="@+id/tv_forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/password"
-            android:layout_alignEnd="@id/password"
+            android:layout_below="@id/et_password"
+            android:layout_alignEnd="@id/et_password"
             android:layout_marginTop="5dp"
             android:text="@string/forgot_password"
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/login_button"
+            android:id="@+id/bt_login_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/forgot_password"
+            android:layout_below="@id/tv_forgot_password"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/login_button_background_color"
@@ -86,10 +86,10 @@
             android:textSize="20sp" />
 
         <LinearLayout
-            android:id="@+id/linear_section"
+            android:id="@+id/ll_linear_section"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/login_button"
+            android:layout_below="@id/bt_login_button"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:gravity="center"
@@ -110,7 +110,7 @@
                 android:background="@color/off_black" />
 
             <TextView
-                android:id="@+id/register_button"
+                android:id="@+id/tv_register_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register"
@@ -119,10 +119,10 @@
         </LinearLayout>
 
         <RelativeLayout
-            android:id="@+id/section_break"
+            android:id="@+id/rl_section_break"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/linear_section"
+            android:layout_below="@id/ll_linear_section"
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
             android:gravity="center">
@@ -152,10 +152,10 @@
         </RelativeLayout>
 
         <Button
-            android:id="@+id/account_switch_button"
+            android:id="@+id/bt_account_switch_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/section_break"
+            android:layout_below="@+id/rl_section_break"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/goto_button_background_color"
@@ -163,16 +163,16 @@
             android:textColor="@color/text_color" />
 
         <TextView
-            android:id="@+id/contact_details"
+            android:id="@+id/tv_contact_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@id/icons_section"
+            android:layout_above="@id/ll_icons_section"
             android:layout_centerHorizontal="true"
             android:text="@string/more_information"
             android:textSize="20sp" />
 
         <LinearLayout
-            android:id="@+id/icons_section"
+            android:id="@+id/ll_icons_section"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

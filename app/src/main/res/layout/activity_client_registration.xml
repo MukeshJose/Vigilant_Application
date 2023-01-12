@@ -9,7 +9,7 @@
     tools:context=".clientside.ClientRegistration">
 
     <TextView
-        android:id="@+id/registration_heading"
+        android:id="@+id/tv_registration_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -20,18 +20,18 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_alignBottom="@id/registration_heading"
+        android:layout_alignBottom="@id/tv_registration_heading"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
-        android:layout_toRightOf="@id/registration_heading"
+        android:layout_toRightOf="@id/tv_registration_heading"
         android:background="@color/off_black" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/display_image"
+        android:id="@+id/cv_display_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/registration_heading"
+        android:layout_below="@id/tv_registration_heading"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         app:cardBackgroundColor="@color/material_on_background_disabled"
@@ -44,13 +44,13 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/dp_edit_button"
+        android:id="@+id/cv_dp_edit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/display_image"
+        android:layout_below="@id/cv_display_image"
         android:layout_marginLeft="-40dp"
         android:layout_marginTop="-60dp"
-        android:layout_toRightOf="@id/display_image"
+        android:layout_toRightOf="@id/cv_display_image"
         app:cardBackgroundColor="@color/off_black"
         app:cardCornerRadius="100dp"
         app:cardElevation="10dp">
@@ -63,11 +63,11 @@
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/user_name"
+        android:id="@+id/et_user_name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/display_image"
+        android:layout_below="@id/cv_display_image"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         app:endIconMode="clear_text">
@@ -87,18 +87,18 @@
 <!--        android:id="@+id/spinner_card"-->
 <!--        android:layout_width="350dp"-->
 <!--        android:layout_height="50dp"-->
-<!--        android:layout_below="@id/user_name"-->
-<!--        android:layout_alignStart="@id/user_name"-->
+<!--        android:layout_below="@id/et_user_name"-->
+<!--        android:layout_alignStart="@id/et_user_name"-->
 <!--        android:layout_marginTop="10dp"-->
 <!--        android:background="@drawable/spinner_background"-->
 <!--        android:backgroundTint="@color/background_color_two">-->
 
         <Spinner
-            android:id="@+id/id_type"
+            android:id="@+id/sp_id_type"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:hint="@string/ID_type"
-            android:layout_below="@id/user_name"
+            android:layout_below="@id/et_user_name"
             android:layout_centerHorizontal="true"
             android:background="@drawable/spinner_background"
             android:padding="10dp"
@@ -107,11 +107,11 @@
 <!--    </androidx.cardview.widget.CardView>-->
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ID_number"
+        android:id="@+id/et_id_number"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id_type"
+        android:layout_below="@id/sp_id_type"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         app:endIconMode="clear_text">
@@ -128,11 +128,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/phone_number"
+        android:id="@+id/et_phone_number"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ID_number"
+        android:layout_below="@id/et_id_number"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         app:endIconMode="clear_text">
@@ -150,11 +150,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
+        android:id="@+id/et_password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/phone_number"
+        android:layout_below="@id/et_phone_number"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         app:endIconMode="clear_text">
@@ -174,15 +174,15 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_below="@id/password"
-        android:layout_alignBaseline="@id/register_button"
+        android:layout_below="@id/et_password"
+        android:layout_alignBaseline="@id/bt_register_button"
         android:background="@color/off_black" />
 
     <Button
-        android:id="@+id/register_button"
+        android:id="@+id/bt_register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password"
+        android:layout_below="@id/et_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/login_button_background_color"
