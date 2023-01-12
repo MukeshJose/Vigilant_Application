@@ -14,7 +14,10 @@
         android:theme="@style/Theme.VigilantApplication"
         tools:targetApi="31">
         <activity
-            android:name=".ClientRegistration"
+            android:name=".clientside.Complaint_Form"
+            android:exported="false" />
+        <activity
+            android:name=".clientside.ClientRegistration"
             android:exported="false" />
         <activity
             android:name=".OfficerLogin"
@@ -23,7 +26,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ClientLogin"
+            android:name=".clientside.ClientLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

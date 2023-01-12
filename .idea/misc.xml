@@ -7,17 +7,21 @@
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/drawable/ic__lock.xml" value="0.1" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/drawable/ic__message.xml" value="0.1" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/drawable/ic__phone.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.1" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/drawable/ic_facebook.xml" value="0.1" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/drawable/ic_id_icon.xml" value="0.1" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/drawable/ic_instagram.xml" value="0.1" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/drawable/ic_twitter.xml" value="0.1" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/drawable/spinner_background.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/layout/activity_client_login.xml" value="0.17272338606241983" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/layout/activity_client_registration.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/layout/activity_complain_form.xml" value="0.25" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/layout/activity_complaint_form.xml" value="0.25" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/layout/activity_login.xml" value="0.16417272338606242" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/layout/activity_login_client.xml" value="0.25" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/layout/activity_officer_login.xml" value="0.33" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/VigilantApplication/app/src/main/res/layout/activity_officer_login.xml" value="0.25" />
       </map>
     </option>
   </component>

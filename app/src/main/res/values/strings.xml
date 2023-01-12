@@ -20,5 +20,18 @@
     <string name="ID_number">Enter ID Number </string>
     <string name="select_password">Select a Password </string>
 
+    <string name="complaint_subject">Subject</string>
+    <string name="office_type">Enter the Govt Establishment</string>
+    <string name="location">Enter Location/Address</string>
+    <string name="complain">Name/Position of the accused</string>
+    <string name="description">Description</string>
+    <string name="photo_upload">Upload a Photo (Optional)</string>
+    <string name="contact_number">Enter a Contact Number (Optional)</string>
+    <string name="anonymous">Add Complaint Anonymously :</string>
+    <string name="complaint_button">ADD COMPLAINT</string>
+
+    <string name="goBack_button">Go Back</string>
+    <string name="help_button">Help?</string>
+
 
 </resources>

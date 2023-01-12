@@ -1,4 +1,4 @@
-package com.example.vigilantapplication;
+package com.example.vigilantapplication.clientside;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.vigilantapplication.R;
 
 public class ClientLogin extends AppCompatActivity {
 
@@ -23,7 +25,7 @@ public class ClientLogin extends AppCompatActivity {
         goToButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ClientLogin.this, OfficerLogin.class);
+                Intent intent = new Intent(ClientLogin.this, Complaint_Form.class);
                 startActivity(intent);
             }
         });

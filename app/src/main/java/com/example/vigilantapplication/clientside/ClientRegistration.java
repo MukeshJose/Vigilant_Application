@@ -1,4 +1,4 @@
-package com.example.vigilantapplication;
+package com.example.vigilantapplication.clientside;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.example.vigilantapplication.R;
 
 public class ClientRegistration extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Spinner spinner;

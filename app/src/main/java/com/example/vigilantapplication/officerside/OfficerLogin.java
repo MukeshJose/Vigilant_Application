@@ -1,8 +1,10 @@
-package com.example.vigilantapplication;
+package com.example.vigilantapplication.officerside;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.vigilantapplication.R;
 
 public class OfficerLogin extends AppCompatActivity {
 
