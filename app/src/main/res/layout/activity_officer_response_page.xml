@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/application_background"
+
+    tools:context=".clientside.ClientComplainForm">
+
+    <TextView
+        android:id="@+id/tv_goBack_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/goBack_button"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/text_color"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_complaint_subject"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_goBack_button"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/spinner_background"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/tv_office_type"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_complaint_subject"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/tv_office_location"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_office_type"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/tv_accused_name"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_office_location"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/tv_description_box"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/tv_accused_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:gravity="start"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/iv_photo_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_description_box"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_section"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_photo_upload"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_download_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/background_color_two"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:id="@+id/iv_download_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_arrow_downward_24" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_call_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            app:cardBackgroundColor="@color/background_color_two"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:id="@+id/iv_call_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_local_phone_24" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_message_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            app:cardBackgroundColor="@color/background_color_two"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:id="@+id/iv_message_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_mail_outline_24" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_response_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_section"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/background_color_three"
+        android:text="@string/respond"
+        android:textColor="@color/text_color" />
+
+
+</RelativeLayout>

@@ -132,6 +132,7 @@
         android:layout_below="@id/et_description_box"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
         android:background="@drawable/spinner_background"
         android:drawableEnd="@drawable/ic_baseline_add_24"
         android:drawablePadding="20dp"

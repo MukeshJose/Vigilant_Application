@@ -14,7 +14,10 @@
         android:theme="@style/Theme.VigilantApplication"
         tools:targetApi="31">
         <activity
-            android:name=".ClientCheckStatus"
+            android:name=".officerside.OfficerResponsePage"
+            android:exported="false" />
+        <activity
+            android:name=".clientside.ClientCheckStatus"
             android:exported="false" />
         <activity
             android:name=".clientside.EditClientProfile"

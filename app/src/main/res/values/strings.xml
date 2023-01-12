@@ -39,5 +39,8 @@
     <string name="save_button">Save</string>
     <string name="cancel_button">Cancel</string>
 
+    <string name="check_status_heading">Your Complaints</string>
+    <string name="respond">Respond</string>
+
 
 </resources>
