@@ -33,5 +33,11 @@
     <string name="goBack_button">Go Back</string>
     <string name="help_button">Help?</string>
 
+    <string name="profile_heading">Your Profile</string>
+    <string name="edit_profile_button">Edit Profile</string>
+    <string name="edit_profile_heading">Update Profile </string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+
 
 </resources>
