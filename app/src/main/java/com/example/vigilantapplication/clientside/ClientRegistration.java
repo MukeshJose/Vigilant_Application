@@ -1,21 +1,44 @@
 package com.example.vigilantapplication.clientside;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.example.vigilantapplication.R;
+import com.example.vigilantapplication.model.Root;
+import com.example.vigilantapplication.retrofit.APIClient;
+import com.example.vigilantapplication.retrofit.APIInterface;
+import com.google.android.material.textfield.TextInputEditText;
+
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ClientRegistration extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Spinner spinner;
     String[] IdTypes = {"--Select an ID--", "Aadhar card", "Driving License", "Pan Card"};
     private Button btRegisterButton;
+    private CardView cvDisplayImage;
+    private CardView cvDpEditButton;
+    private TextInputEditText etUserName;
+    private Spinner spIdType;
+    private TextInputEditText etIdNumber;
+    private TextInputEditText etAddress;
+    private TextInputEditText etEmailId;
+    private TextInputEditText etPhoneNumber;
+    private TextInputEditText etPassword;
+
+    String id_type_selection;
 
 
     @Override
@@ -30,26 +53,67 @@ public class ClientRegistration extends AppCompatActivity implements AdapterView
         spinner.setAdapter(adapter);
         initView();
 
+
         btRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                Intent intent = new Intent(ClientRegistration.this, ViewClientProfile.class);
 //                startActivity(intent);
+
+                RequestBody name = RequestBody.create(MediaType.parse("text/plain"), etUserName.getText().toString());
+                RequestBody phone = RequestBody.create(MediaType.parse("text/plain"), etPhoneNumber.getText().toString());
+                RequestBody email = RequestBody.create(MediaType.parse("text/plain"), etEmailId.getText().toString());
+                RequestBody password = RequestBody.create(MediaType.parse("text/plain"), etPassword.getText().toString());
+                RequestBody address = RequestBody.create(MediaType.parse("text/plain"), etAddress.getText().toString());
+                RequestBody id_type = RequestBody.create(MediaType.parse("text/plain"), id_type_selection);
+                RequestBody id_number = RequestBody.create(MediaType.parse("text/plain"), etIdNumber.getText().toString());
+
+                APIInterface api_registration = APIClient.getClient().create(APIInterface.class);
+
+                api_registration.CALL_APIRegistration(name, email, phone, password, address, id_type, id_number).enqueue(new Callback<Root>() {
+                    @Override
+                    public void onResponse(Call<Root> call, Response<Root> response) {
+                        if (response.isSuccessful()) {
+                            Root root = response.body();
+                            if (root.status) {
+                                Toast.makeText(ClientRegistration.this, "Registration is Successful", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(ClientRegistration.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Root> call, Throwable t) {
+                        Toast.makeText(ClientRegistration.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
             }
         });
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
+        id_type_selection = IdTypes[i];
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
+        Toast.makeText(this, "Please select an option", Toast.LENGTH_SHORT).show();
 
     }
 
     private void initView() {
         btRegisterButton = findViewById(R.id.bt_register_button);
+        cvDisplayImage = findViewById(R.id.cv_display_image);
+        cvDpEditButton = findViewById(R.id.cv_dp_edit_button);
+        etUserName = findViewById(R.id.et_user_name);
+        spIdType = findViewById(R.id.sp_id_type);
+        etIdNumber = findViewById(R.id.et_id_number);
+        etAddress = findViewById(R.id.et_address);
+        etEmailId = findViewById(R.id.et_email_id);
+        etPhoneNumber = findViewById(R.id.et_phone_number);
+        etPassword = findViewById(R.id.et_password);
     }
 }

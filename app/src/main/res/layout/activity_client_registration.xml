@@ -65,7 +65,7 @@
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_user_name"
+        android:id="@+id/tl_user_name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
@@ -75,6 +75,7 @@
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_user_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/ic_baseline_account_circle_24"
@@ -89,8 +90,8 @@
 <!--        android:id="@+id/spinner_card"-->
 <!--        android:layout_width="350dp"-->
 <!--        android:layout_height="50dp"-->
-<!--        android:layout_below="@id/et_user_name"-->
-<!--        android:layout_alignStart="@id/et_user_name"-->
+<!--        android:layout_below="@id/tl_user_name"-->
+<!--        android:layout_alignStart="@id/tl_user_name"-->
 <!--        android:layout_marginTop="10dp"-->
 <!--        android:background="@drawable/spinner_background"-->
 <!--        android:backgroundTint="@color/background_color_two">-->
@@ -100,7 +101,7 @@
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:hint="@string/ID_type"
-            android:layout_below="@id/et_user_name"
+            android:layout_below="@id/tl_user_name"
             android:layout_centerHorizontal="true"
             android:background="@drawable/spinner_background"
             android:padding="10dp"
@@ -109,7 +110,7 @@
 <!--    </androidx.cardview.widget.CardView>-->
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_id_number"
+        android:id="@+id/tl_id_number"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
@@ -119,6 +120,7 @@
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_id_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/ic_id_icon"
@@ -130,16 +132,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_address"
+        android:id="@+id/tl_address"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_id_number"
+        android:layout_below="@id/tl_id_number"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_address"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/address"
@@ -151,16 +154,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_email"
+        android:id="@+id/tl_email_id"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_address"
+        android:layout_below="@id/tl_address"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/email_icon"
@@ -172,16 +176,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_phone_number"
+        android:id="@+id/tl_phone_number"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_email"
+        android:layout_below="@id/tl_email_id"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_phone_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal|end"
@@ -194,16 +199,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_password"
+        android:id="@+id/tl_password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_phone_number"
+        android:layout_below="@id/tl_phone_number"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/ic__lock"
@@ -218,7 +224,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_below="@id/et_password"
+        android:layout_below="@id/tl_password"
         android:layout_alignBaseline="@id/bt_register_button"
         android:background="@color/off_black" />
 
@@ -226,7 +232,7 @@
         android:id="@+id/bt_register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_password"
+        android:layout_below="@id/tl_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/login_button_background_color"
