@@ -35,7 +35,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         app:cardBackgroundColor="@color/material_on_background_disabled"
-        app:cardCornerRadius="100dp">
+        app:cardCornerRadius="100dp"
+        android:visibility="invisible">
 
         <ImageView
             android:layout_width="150dp"
@@ -53,7 +54,8 @@
         android:layout_toRightOf="@id/cv_display_image"
         app:cardBackgroundColor="@color/off_black"
         app:cardCornerRadius="100dp"
-        app:cardElevation="10dp">
+        app:cardElevation="10dp"
+        android:visibility="invisible">
 
         <ImageView
             android:layout_width="50dp"
@@ -128,11 +130,53 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_phone_number"
+        android:id="@+id/et_address"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/et_id_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/address"
+            android:drawablePadding="10dp"
+            android:hint="@string/address"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_address"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/email_icon"
+            android:drawablePadding="10dp"
+            android:hint="@string/email_address"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_phone_number"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_email"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         app:endIconMode="clear_text">

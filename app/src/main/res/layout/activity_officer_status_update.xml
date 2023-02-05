@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/application_background"
+    android:gravity="center"
+    tools:context=".officerside.OfficerStatusUpdate">
+
+    <TextView
+        android:id="@+id/tv_page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/page_title"
+        android:textColor="@color/text_color"
+        android:textSize="30sp" />
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_alignBaseline="@+id/tv_page_title"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_page_title"
+        android:background="@color/text_color" />
+
+    <TextView
+        android:id="@+id/tv_status_update_title"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_page_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_background"
+        android:drawableLeft="@drawable/ic_baseline_subject_24"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/text_color"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_status_update_est"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_status_update_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:drawableLeft="@drawable/ic_building"
+        android:padding="10dp"
+        android:textColor="@color/text_color"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_status_update_date"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/tv_status_update_est"
+        android:layout_alignStart="@id/tv_status_update_title"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:drawableLeft="@drawable/ic_baseline_date_range_24"
+        android:padding="10dp"
+        android:textColor="@color/text_color"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/sp_status_update"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_status_update_date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/spinner_background"
+        android:spinnerMode="dialog" />
+
+    <EditText
+        android:id="@+id/et_status_description"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/sp_status_update"
+        android:layout_alignStart="@id/tv_status_update_title"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_background" />
+
+    <Button
+        android:id="@+id/bt_submit_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_status_description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/background_color_two"
+        android:text="@string/submit_button"
+        android:textColor="@color/text_color"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignBaseline="@id/bt_submit_status"
+        android:background="@color/off_black" />
+
+</RelativeLayout>

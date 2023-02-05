@@ -23,6 +23,7 @@
             android:textColor="@color/text_color"
             android:textSize="30sp"
             android:textStyle="bold" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -122,29 +123,29 @@
             android:layout_below="@id/ll_linear_section"
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
-            android:gravity="center">
+          >
 
             <View
-                android:layout_width="200dp"
+                android:layout_width="190dp"
                 android:layout_height="2dp"
                 android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
                 android:background="@color/off_black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center"
                 android:text="or"
+                android:padding="10dp"
                 android:textSize="20sp" />
 
             <View
-                android:layout_width="200dp"
+                android:layout_width="190dp"
                 android:layout_height="2dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
                 android:background="@color/off_black" />
         </RelativeLayout>
 

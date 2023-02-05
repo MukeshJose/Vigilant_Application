@@ -47,6 +47,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/complaint_subject"
+            android:drawableLeft="@drawable/ic_baseline_subject_24"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="10dp"
             android:inputType="text"
             android:padding="10dp"
             android:textSize="20sp" />
@@ -66,6 +69,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/office_type"
+            android:drawableLeft="@drawable/ic_building"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center_vertical"
             android:inputType="text"
             android:padding="10dp"
             android:textSize="20sp" />
@@ -85,6 +91,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/location"
+            android:drawableLeft="@drawable/ic_location_address"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center_vertical"
             android:inputType="text"
             android:padding="10dp"
             android:textSize="20sp" />
@@ -103,6 +112,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center_vertical"
             android:hint="@string/complain"
             android:inputType="text"
             android:padding="10dp"
@@ -165,6 +177,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/contact_number"
+            android:drawableLeft="@drawable/ic__phone"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center_vertical"
             android:inputType="phone"
             android:padding="10dp"
             android:textSize="20sp" />

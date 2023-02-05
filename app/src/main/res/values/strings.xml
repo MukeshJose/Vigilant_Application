@@ -15,6 +15,9 @@
     <string name="admin_contact">Contact Admin</string>
     <string name="registration">Registration </string>
 
+    <string name="address">Enter your Address </string>
+    <string name="email_id">Enter the email id </string>
+
     <string name="user_name">Enter the Name </string>
     <string name="ID_type">Select ID Type </string>
     <string name="ID_number">Enter ID Number </string>
@@ -41,6 +44,15 @@
 
     <string name="check_status_heading">Your Complaints</string>
     <string name="respond">Respond</string>
+
+    <string name="page_title">Status Update</string>
+    <string name="client_contact">Contact Client</string>
+    <string name="status_button">Update Status</string>
+
+    <string name="submit_button">Submit</string>
+    <string name="welcome_message">WELCOME</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

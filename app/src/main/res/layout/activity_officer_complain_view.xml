@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/application_background"
+    tools:context=".officerside.OfficerComplainView">
+
+    <TextView
+        android:id="@+id/tv_goBack_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/goBack_button"
+        android:textColor="@color/text_color"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tv_goBack_button"
+        android:layout_marginTop="20dp"
+        android:background="@color/off_black" />
+
+    <TextView
+        android:id="@+id/tv_complaint_subject"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_goBack_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/spinner_background"
+        android:drawableLeft="@drawable/ic_baseline_subject_24"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/tv_office_type"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_complaint_subject"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:drawableLeft="@drawable/ic_building"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/tv_office_location"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_office_type"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:drawableLeft="@drawable/ic_location_address"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/tv_accused_name"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_office_location"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+        android:background="@drawable/spinner_background"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/tv_description_box"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/tv_accused_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:gravity="start"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/iv_photo_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_description_box"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_client_contact"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/iv_photo_upload"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:text="@string/client_contact"-->
+    <!--        android:textColor="@color/text_color"-->
+    <!--        android:textSize="25sp" />-->
+
+    <!--    <View-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="2dp"-->
+    <!--        android:layout_below="@id/iv_photo_upload"-->
+    <!--        android:layout_alignBaseline="@id/tv_client_contact"-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--        android:layout_toRightOf="@id/tv_client_contact"-->
+    <!--        android:background="@color/off_black" />-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/rl_contact_section"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_below="@id/tv_description_box"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginTop="10dp"-->
+
+    <!--        android:padding="10dp">-->
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:id="@+id/cv_client_call"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:backgroundTint="@color/background_color_two"-->
+    <!--            app:cardCornerRadius="100dp">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="60dp"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:src="@drawable/ic_baseline_local_phone_24" />-->
+
+    <!--        </androidx.cardview.widget.CardView>-->
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:id="@+id/cv_client_message"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentEnd="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:backgroundTint="@color/background_color_two"-->
+    <!--            app:cardCornerRadius="100dp">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="60dp"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:src="@drawable/ic_baseline_mail_outline_24" />-->
+
+    <!--        </androidx.cardview.widget.CardView>-->
+    <!--    </RelativeLayout>-->
+
+    <Button
+        android:id="@+id/bt_status_update_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_description_box"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/background_color_two"
+        android:text="@string/status_button"
+        android:textColor="@color/text_color"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/iv_photo_upload"
+        android:layout_alignBaseline="@id/bt_status_update_button"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/off_black" />
+
+
+</RelativeLayout>

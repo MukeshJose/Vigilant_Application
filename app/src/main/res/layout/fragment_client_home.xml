@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/application_background"
+    tools:context=".ClientHomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_page_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/tv_home_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_message"
+                android:textColor="@color/text_color"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/tv_settings_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_baseline_settings_24" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_main_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_add_complaint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/off_black"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/iv_add_complaint"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/ic_baseline_add_24" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_check_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/cv_add_complaint"
+                android:backgroundTint="@color/off_black"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/iv_check_status"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_status" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_add_complaint"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/off_black"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/iv_history"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_baseline_history_24" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_add_complaint"
+                android:layout_alignStart="@id/cv_check_status"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/cv_history"
+                android:backgroundTint="@color/off_black"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/iv_contacts"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_baseline_contact_support_24" />
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

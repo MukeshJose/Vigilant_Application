@@ -1,4 +1,4 @@
-package com.example.vigilantapplication.clientside;
+package com.example.vigilantapplication.officerside;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,26 +9,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.vigilantapplication.R;
 
-public class ViewClientProfile extends AppCompatActivity {
+public class OfficerComplainView extends AppCompatActivity {
 
-    private Button btEditProfileButton;
+    private Button btStatusUpdateButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_client_profile);
+        setContentView(R.layout.activity_officer_complain_view);
         initView();
-
-        btEditProfileButton.setOnClickListener(new View.OnClickListener() {
+        btStatusUpdateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ViewClientProfile.this, EditClientProfile.class);
+                Intent intent = new Intent(getApplicationContext(), OfficerStatusUpdate.class);
                 startActivity(intent);
             }
         });
     }
 
     private void initView() {
-        btEditProfileButton = findViewById(R.id.bt_edit_profile_button);
+        btStatusUpdateButton = findViewById(R.id.bt_status_update_button);
     }
 }

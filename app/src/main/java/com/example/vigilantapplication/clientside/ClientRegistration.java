@@ -33,8 +33,8 @@ public class ClientRegistration extends AppCompatActivity implements AdapterView
         btRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ClientRegistration.this, ViewClientProfile.class);
-                startActivity(intent);
+//                Intent intent = new Intent(ClientRegistration.this, ViewClientProfile.class);
+//                startActivity(intent);
             }
         });
     }

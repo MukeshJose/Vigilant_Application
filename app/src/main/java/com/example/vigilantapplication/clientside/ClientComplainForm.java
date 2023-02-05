@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
+import com.example.vigilantapplication.ClientHomeFragment;
+import com.example.vigilantapplication.MainActivity;
 import com.example.vigilantapplication.R;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -42,6 +44,14 @@ public class ClientComplainForm extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ClientComplainForm.this, ClientCheckStatus.class);
+                startActivity(intent);
+            }
+        });
+
+        btAddComplaintButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
