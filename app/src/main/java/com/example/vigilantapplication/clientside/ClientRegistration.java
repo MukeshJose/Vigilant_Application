@@ -16,28 +16,42 @@ import com.example.vigilantapplication.model.Root;
 import com.example.vigilantapplication.retrofit.APIClient;
 import com.example.vigilantapplication.retrofit.APIInterface;
 import com.google.android.material.textfield.TextInputEditText;
+import com.mobsandgeeks.saripaar.annotation.ConfirmPassword;
+import com.mobsandgeeks.saripaar.annotation.Email;
+import com.mobsandgeeks.saripaar.annotation.NotEmpty;
+import com.mobsandgeeks.saripaar.annotation.Password;
 
 import okhttp3.MediaType;
-import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ClientRegistration extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    Spinner spinner;
+
     String[] IdTypes = {"--Select an ID--", "Aadhar card", "Driving License", "Pan Card"};
     private Button btRegisterButton;
     private CardView cvDisplayImage;
     private CardView cvDpEditButton;
+    @NotEmpty
     private TextInputEditText etUserName;
+    @NotEmpty
     private Spinner spIdType;
+    @NotEmpty
     private TextInputEditText etIdNumber;
+    @NotEmpty
     private TextInputEditText etAddress;
+    @NotEmpty
+    @Email
     private TextInputEditText etEmailId;
+    @NotEmpty
     private TextInputEditText etPhoneNumber;
+    @NotEmpty
+    @Password
     private TextInputEditText etPassword;
-
+    @NotEmpty
+    @ConfirmPassword
+    private TextInputEditText etConfirmPassword;
     String id_type_selection;
 
 
@@ -46,12 +60,11 @@ public class ClientRegistration extends AppCompatActivity implements AdapterView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_registration);
 
-        spinner = findViewById(R.id.sp_id_type);
-        spinner.setOnItemSelectedListener(ClientRegistration.this);
+        initView();
+        spIdType.setOnItemSelectedListener(ClientRegistration.this);
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, IdTypes);
         adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        initView();
+        spIdType.setAdapter(adapter);
 
 
         btRegisterButton.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +93,8 @@ public class ClientRegistration extends AppCompatActivity implements AdapterView
                             } else {
                                 Toast.makeText(ClientRegistration.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                             }
+                        }else{
+                            Toast.makeText(ClientRegistration.this, "Reg error", Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -115,5 +130,6 @@ public class ClientRegistration extends AppCompatActivity implements AdapterView
         etEmailId = findViewById(R.id.et_email_id);
         etPhoneNumber = findViewById(R.id.et_phone_number);
         etPassword = findViewById(R.id.et_password);
+        etConfirmPassword = findViewById(R.id.et_confirm_password);
     }
 }

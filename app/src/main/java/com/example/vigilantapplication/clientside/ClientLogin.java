@@ -41,7 +41,7 @@ public class ClientLogin extends AppCompatActivity {
         tvRegisterButton = findViewById(R.id.tv_register_button);
         btLoginButton = findViewById(R.id.bt_login_button);
 
-        APIInterface api_login = APIClient.getClient().create(APIInterface.class);
+
         btAccountSwitchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,14 +63,19 @@ public class ClientLogin extends AppCompatActivity {
             public void onClick(View view) {
 //                Intent intent = new Intent(ClientLogin.this, ClientComplainForm.class);
 //                startActivity(intent);
-                api_login.CALL_APIUserLogin(phoneNumber.getText().toString(), password.getText().toString(), "djhjhjhdfjhfdfdh").enqueue(new Callback<Root>() {
+                APIInterface api_login = APIClient.getClient().create(APIInterface.class);
+                api_login.CALL_APIUserLogin(phoneNumber.getText().toString(), password.getText().toString(), "jshfbvjshvjfdhvaj").enqueue(new Callback<Root>() {
                     @Override
                     public void onResponse(Call<Root> call, Response<Root> response) {
                         if (response.isSuccessful()) {
                             Root root = response.body();
                             if (root.status) {
                                 startActivity(new Intent(ClientLogin.this, MainActivity.class));
+                            }else{
+                                Toast.makeText(ClientLogin.this, "Login Failed", Toast.LENGTH_SHORT).show();
                             }
+                        }else{
+                            Toast.makeText(ClientLogin.this, "error", Toast.LENGTH_SHORT).show();
                         }
                     }
 
