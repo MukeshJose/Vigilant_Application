@@ -156,6 +156,7 @@
         android:layout_below="@id/et_address"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
