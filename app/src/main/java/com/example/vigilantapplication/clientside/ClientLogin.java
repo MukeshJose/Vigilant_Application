@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.vigilantapplication.ClientProfileViewFragment;
 import com.example.vigilantapplication.MainActivity;
 import com.example.vigilantapplication.R;
 import com.example.vigilantapplication.model.Root;
@@ -17,6 +18,7 @@ import com.example.vigilantapplication.retrofit.APIClient;
 import com.example.vigilantapplication.retrofit.APIInterface;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.mobsandgeeks.saripaar.annotation.NotEmpty;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -29,8 +31,12 @@ public class ClientLogin extends AppCompatActivity {
     private Button btLoginButton;
     private TextView tvRegisterButton;
     private Button btAccountSwitchButton;
+    @NotEmpty
     private TextInputEditText phoneNumber;
+    @NotEmpty
     private TextInputEditText password;
+    String device_token = "jshfbvjshvjfdhvaj";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,20 +67,22 @@ public class ClientLogin extends AppCompatActivity {
         btLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(ClientLogin.this, ClientComplainForm.class);
-//                startActivity(intent);
+
+                ClientProfileViewFragment clientProfileViewFragmentNew = new ClientProfileViewFragment(phoneNumber.getText().toString(), password.getText().toString(), device_token);
                 APIInterface api_login = APIClient.getClient().create(APIInterface.class);
-                api_login.CALL_APIUserLogin(phoneNumber.getText().toString(), password.getText().toString(), "jshfbvjshvjfdhvaj").enqueue(new Callback<Root>() {
+                api_login.CALL_APIUserLogin(phoneNumber.getText().toString(), password.getText().toString(), device_token).enqueue(new Callback<Root>() {
+
+
                     @Override
                     public void onResponse(Call<Root> call, Response<Root> response) {
                         if (response.isSuccessful()) {
                             Root root = response.body();
                             if (root.status) {
                                 startActivity(new Intent(ClientLogin.this, MainActivity.class));
-                            }else{
+                            } else {
                                 Toast.makeText(ClientLogin.this, "Login Failed", Toast.LENGTH_SHORT).show();
                             }
-                        }else{
+                        } else {
                             Toast.makeText(ClientLogin.this, "error", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -89,6 +97,7 @@ public class ClientLogin extends AppCompatActivity {
         initView();
     }
 
+
     private void initView() {
 
         tvForgotPassword = (TextView) findViewById(R.id.tv_forgot_password);
@@ -97,5 +106,8 @@ public class ClientLogin extends AppCompatActivity {
         btAccountSwitchButton = (Button) findViewById(R.id.bt_account_switch_button);
         phoneNumber = (TextInputEditText) findViewById(R.id.phone_number);
         password = (TextInputEditText) findViewById(R.id.password);
+
     }
+
+
 }

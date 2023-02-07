@@ -21,6 +21,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     ClientHomeFragment clientHomeFragment = new ClientHomeFragment();
     ClientNotificationFragment clientNotificationFragment = new ClientNotificationFragment();
     ClientProfileViewFragment clientProfileViewFragment = new ClientProfileViewFragment();
+    FragmentManager fragmentManager = getSupportFragmentManager();
+    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+    FragmentManager fragmentManagerNotification = getSupportFragmentManager();
+    FragmentTransaction fragmentTransactionNotification = fragmentManagerNotification.beginTransaction();
+    FragmentManager fragmentManagerAccount = getSupportFragmentManager();
+    FragmentTransaction fragmentTransactionAccount = fragmentManagerAccount.beginTransaction();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +55,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_fragment, clientHomeFragment).addToBackStack("null");
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_fragment, clientHomeFragment).commit();
 
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
                 fragmentTransaction.replace(R.id.fl_main_fragment, clientHomeFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
@@ -60,8 +66,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_fragment, clientHomeFragment).addToBackStack("null");
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_fragment, clientHomeFragment).commit();
 
-                FragmentManager fragmentManagerNotification = getSupportFragmentManager();
-                FragmentTransaction fragmentTransactionNotification = fragmentManagerNotification.beginTransaction();
                 fragmentTransactionNotification.replace(R.id.fl_main_fragment, clientNotificationFragment);
                 fragmentTransactionNotification.addToBackStack(null);
                 fragmentTransactionNotification.commit();
@@ -70,8 +74,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.id_account:
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fl_main_fragment, clientProfileViewFragment).commit();
 
-                FragmentManager fragmentManagerAccount = getSupportFragmentManager();
-                FragmentTransaction fragmentTransactionAccount = fragmentManagerAccount.beginTransaction();
                 fragmentTransactionAccount.replace(R.id.fl_main_fragment, clientProfileViewFragment);
                 fragmentTransactionAccount.addToBackStack(null);
                 fragmentTransactionAccount.commit();
@@ -81,4 +83,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+    }
 }
