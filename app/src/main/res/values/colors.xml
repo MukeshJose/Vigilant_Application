@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="text_color">#F4E644</color>
+    <color name="the_background_color">#78909C</color>
     <color name="background_color_one">#014B56</color>
     <color name="background_color_two">#3DCADF</color>
     <color name="background_color_three">#02272D</color>

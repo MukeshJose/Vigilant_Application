@@ -29,4 +29,8 @@ public interface APIInterface {
 
     @GET("login_vigilance.php")
     Call<Root> CALL_APIOfficerLogin(@Query("id") String id, @Query("password") String password, @Query("device_token") String device_token);
+
+    @GET("complient.php")
+    Call<Root> CALL_APIAddComplaint();
+
 }

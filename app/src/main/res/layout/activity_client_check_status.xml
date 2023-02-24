@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/application_background"
+    android:background="@color/the_background_color"
     tools:context=".clientside.ClientCheckStatus">
 
 
@@ -15,6 +15,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="70dp"
         android:text="@string/check_status_heading"
+        android:textStyle="bold"
         android:textColor="@color/text_color"
         android:textSize="30sp" />
 

@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.example.vigilantapplication.ClientProfileViewFragment;
 import com.example.vigilantapplication.MainActivity;
@@ -19,6 +20,7 @@ import com.example.vigilantapplication.retrofit.APIInterface;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.mobsandgeeks.saripaar.annotation.NotEmpty;
+import com.mobsandgeeks.saripaar.annotation.Password;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,10 +32,11 @@ public class ClientLogin extends AppCompatActivity {
     private TextView tvForgotPassword;
     private Button btLoginButton;
     private TextView tvRegisterButton;
-    private Button btAccountSwitchButton;
+    private CardView cvAccountSwitchButton;
     @NotEmpty
     private TextInputEditText phoneNumber;
     @NotEmpty
+    @Password
     private TextInputEditText password;
     String device_token = "jshfbvjshvjfdhvaj";
 
@@ -41,14 +44,13 @@ public class ClientLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_client_login);
-
-        btAccountSwitchButton = findViewById(R.id.bt_account_switch_button);
+        setContentView(R.layout.new_activity_login);
         tvRegisterButton = findViewById(R.id.tv_register_button);
         btLoginButton = findViewById(R.id.bt_login_button);
+        initView();
 
 
-        btAccountSwitchButton.setOnClickListener(new View.OnClickListener() {
+        cvAccountSwitchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ClientLogin.this, OfficerLogin.class);
@@ -103,7 +105,7 @@ public class ClientLogin extends AppCompatActivity {
         tvForgotPassword = (TextView) findViewById(R.id.tv_forgot_password);
         btLoginButton = (Button) findViewById(R.id.bt_login_button);
         tvRegisterButton = (TextView) findViewById(R.id.tv_register_button);
-        btAccountSwitchButton = (Button) findViewById(R.id.bt_account_switch_button);
+        cvAccountSwitchButton = (CardView) findViewById(R.id.cv_account_switch_button);
         phoneNumber = (TextInputEditText) findViewById(R.id.phone_number);
         password = (TextInputEditText) findViewById(R.id.password);
 
