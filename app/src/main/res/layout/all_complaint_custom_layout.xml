@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="20dp"
     android:background="@drawable/spinner_background"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:backgroundTint="@color/the_background_color">
 
     <TextView
         android:id="@+id/tv_date_all_fragment"
@@ -13,7 +14,7 @@
         android:background="@drawable/spinner_background"
         android:drawableLeft="@drawable/ic_baseline_date_range_24"
         android:padding="10dp"
-        android:textColor="@color/text_color"
+        android:textColor="@color/black"
         android:textSize="16sp" />
 
 

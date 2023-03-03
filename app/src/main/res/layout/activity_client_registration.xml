@@ -17,18 +17,18 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/add_user_amico"/>
+            android:background="@drawable/add_user_amico" />
 
         <TextView
             android:id="@+id/tv_registration_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="@string/registration"
             android:layout_marginTop="70dp"
-            android:visibility="invisible"
+            android:text="@string/registration"
             android:textColor="@color/text_color"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:visibility="invisible" />
 
         <View
             android:layout_width="match_parent"
@@ -265,12 +265,12 @@
 
         <Button
             android:id="@+id/bt_register_button"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/tl_confirm_password"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/login_button_background_color"
+            android:background="@drawable/login_view_background"
             android:text="@string/register"
             android:textColor="@color/text_color"
             android:textSize="20sp" />

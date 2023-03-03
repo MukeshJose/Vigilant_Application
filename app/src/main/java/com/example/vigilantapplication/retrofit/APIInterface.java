@@ -33,4 +33,7 @@ public interface APIInterface {
     @GET("complient.php")
     Call<Root> CALL_APIAddComplaint();
 
+    @GET("complientHistory.php")
+    Call<Root> CALL_APIAllComplaint(@Query("PhoneNumber") String phone_number);
+
 }

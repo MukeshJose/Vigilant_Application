@@ -62,7 +62,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/et_password"
+            android:id="@+id/tl_password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password"
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/login_view_background"
@@ -88,8 +88,8 @@
             android:id="@+id/tv_forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/et_password"
-            android:layout_alignEnd="@id/et_password"
+            android:layout_below="@id/tl_password"
+            android:layout_alignEnd="@id/tl_password"
             android:layout_marginTop="5dp"
             android:text="@string/forgot_password"
             android:textSize="15sp" />

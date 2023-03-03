@@ -23,11 +23,11 @@ public class AllComplaintFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_all_complaint, container, false);
 
         recyclerView = view.findViewById(R.id.rv_all_complaint);
-
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(layoutManager);
-        AllComplaintAdapter allComplaintAdapter = new AllComplaintAdapter(getActivity());
-        recyclerView.setAdapter(allComplaintAdapter);
+//
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+//        recyclerView.setLayoutManager(layoutManager);
+//        AllComplaintAdapter allComplaintAdapter = new AllComplaintAdapter(getActivity());
+//        recyclerView.setAdapter(allComplaintAdapter);
         return view;
     }
 }

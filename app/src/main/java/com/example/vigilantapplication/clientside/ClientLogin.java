@@ -1,6 +1,7 @@
 package com.example.vigilantapplication.clientside;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -69,7 +70,11 @@ public class ClientLogin extends AppCompatActivity {
         btLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                SharedPreferences share = getSharedPreferences("myShared", MODE_PRIVATE);
+                SharedPreferences.Editor edit = share.edit();
+                edit.putString("key1", phoneNumber.getText().toString());
+                edit.commit();
+                Toast.makeText(getApplicationContext(), "saved", Toast.LENGTH_SHORT).show();
                 ClientProfileViewFragment clientProfileViewFragmentNew = new ClientProfileViewFragment(phoneNumber.getText().toString(), password.getText().toString(), device_token);
                 APIInterface api_login = APIClient.getClient().create(APIInterface.class);
                 api_login.CALL_APIUserLogin(phoneNumber.getText().toString(), password.getText().toString(), device_token).enqueue(new Callback<Root>() {
@@ -106,8 +111,8 @@ public class ClientLogin extends AppCompatActivity {
         btLoginButton = (Button) findViewById(R.id.bt_login_button);
         tvRegisterButton = (TextView) findViewById(R.id.tv_register_button);
         cvAccountSwitchButton = (CardView) findViewById(R.id.cv_account_switch_button);
-        phoneNumber = (TextInputEditText) findViewById(R.id.phone_number);
-        password = (TextInputEditText) findViewById(R.id.password);
+        phoneNumber = (TextInputEditText) findViewById(R.id.et_phone_number);
+        password = (TextInputEditText) findViewById(R.id.et_password);
 
     }
 

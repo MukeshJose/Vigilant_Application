@@ -1,6 +1,10 @@
 package com.example.vigilantapplication.Adapters;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,15 +14,23 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.vigilantapplication.R;
+import com.example.vigilantapplication.model.Root;
+import com.example.vigilantapplication.retrofit.APIClient;
+import com.example.vigilantapplication.retrofit.APIInterface;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AllComplaintAdapter extends RecyclerView.Adapter<AllComplaintAdapter.MyViewHolder> {
     Context context;
+    Root root;
 
-    public AllComplaintAdapter(Context context) {
+
+    public AllComplaintAdapter(Context context, Root root) {
         this.context = context;
+        this.root = root;
     }
-
-    String[] names = {"name1", "name2"};
 
     @NonNull
     @Override
@@ -28,21 +40,28 @@ public class AllComplaintAdapter extends RecyclerView.Adapter<AllComplaintAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.textView.setText(names[position]);
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        holder.tvDateAllComplaint.setText(root.driverHistory.get(position).date);
+        holder.tvTitleAllComplaint.setText(root.driverHistory.get(position).suspectName);
+        holder.tvOfficeTypeAllComplaint.setText(root.driverHistory.get(position).description);
     }
 
     @Override
     public int getItemCount() {
-        return names.length;
+        return root.driverHistory.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView textView;
+
+        TextView tvDateAllComplaint;
+        TextView tvTitleAllComplaint;
+        TextView tvOfficeTypeAllComplaint;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.tv_title_all_complaint);
+            tvDateAllComplaint = itemView.findViewById(R.id.tv_date_all_fragment);
+            tvTitleAllComplaint = itemView.findViewById(R.id.tv_title_all_complaint);
+            tvOfficeTypeAllComplaint = itemView.findViewById(R.id.tv_office_type_all_complaint);
         }
     }
 }
